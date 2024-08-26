@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#thumbnailContainer {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid darkgrey;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  width: 35%;
+  white-space: nowrap;
+  top: 10px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: grey;
+}
+::-webkit-scrollbar-thumb {
+  background: paleturquoise;
+}
+
+img {
+  height: 15vh;
+}
+
+#displayImage > * {
+  height: 100vh;
+  width: 100vw;
+}
+
+@media (min-width: 20em) and (max-width: 50em) {
+  #thumbnailContainer {
+    width: 100%;
+    top: auto;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
